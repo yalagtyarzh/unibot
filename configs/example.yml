@@ -1,0 +1,10 @@
+is_debug: true
+is_development: true
+listen:
+  type: port
+  bind_ip: 0.0.0.0
+  port: 8080
+telegram:
+  token:
+app:
+  log_level: trace
