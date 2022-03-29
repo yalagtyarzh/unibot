@@ -6,6 +6,7 @@ import (
 	"sync"
 )
 
+const YoutubeEndpoint = "https://music.youtube.com/watch?v=%s"
 const StructDateFormat = "2006-01-02"
 const SecretJWT = "?"
 
@@ -19,6 +20,10 @@ type Config struct {
 	} `yaml:"listen" env-required:"true"`
 	Telegram struct {
 		Token string `yaml:"token" env:"UNIBOT-TelegramToken" env-required:"true"`
+	}
+	Youtube struct {
+		APIURL      string `yaml:"api_url"`
+		AccessToken string `yaml:"access_token"`
 	}
 	AppConfig AppConfig `yaml:"app" env-required:"true"`
 }
@@ -42,5 +47,6 @@ func GetConfig(path string) *Config {
 			log.Fatal(err)
 		}
 	})
+
 	return instance
 }

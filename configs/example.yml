@@ -6,5 +6,8 @@ listen:
   port: 8080
 telegram:
   token:
+youtube:
+  api_url:
+  access_token:
 app:
   log_level: trace
