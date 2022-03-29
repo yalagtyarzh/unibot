@@ -2,7 +2,7 @@
 .SILENT:
 
 build:
-	go build -o ./.bin/leafsite cmd/web/*.go
+	go build -o ./.bin/unibot cmd/app/main.go
 
 run: build
-	./.bin/leafsite
+	./.bin/unibot
